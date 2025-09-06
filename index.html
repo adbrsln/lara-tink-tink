@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Electron Tinker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div id="title">Laravel Tinktink</div>
+        <div class="title-bar-buttons">
+            <button id="close-btn" class="title-bar-button">✕</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-pane">
+            <div class="project-path">
+                <label for="project-path">Laravel Project Path:</label>
+                <input type="text" id="project-path-input" placeholder="/Users/your-name/code/my-laravel-app" value="/home/omega/Development/smolbiz">
+            </div>
+            <div class="code-editor">
+                <textarea id="code-input" spellcheck="false">return App\Models\User::count();</textarea>
+            </div>
+        </div>
+        <div class="output-pane">
+            <button id="run-button">Run Code</button>
+            <pre id="output-pre"></pre>
+        </div>
+    </div>
+
+    <!-- Include the renderer script -->
+    <script src="./renderer.js"></script>
+</body>
+</html>

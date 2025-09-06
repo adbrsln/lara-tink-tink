@@ -1,0 +1,46 @@
+{
+  "name": "laravel-tink-tink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/npm/example#readme",
+  "author": {
+    "name": "Adib Roslan",
+    "email": "adbroslan@gmail.com",
+    "url": "https://adbroslan.com/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.adbroslan.laravel-tink-tink",
+    "productName": "Laravel TinkTink",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "style.css",
+      "runner.php"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "rpm"
+      ]
+    }
+  }
+}
